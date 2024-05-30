@@ -1,0 +1,121 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #1b1b1b;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+.content-wrapper {
+    display: flex;
+    flex: 1;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #222;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.form-group {
+    margin-bottom: 25px; /* Increase spacing between form groups */
+    display: flex;
+    align-items: center;
+}
+
+.form-label {
+    color: #ccc;
+    width: 150px;
+    margin-right: 10px;
+    text-align: right;
+}
+
+.form-control,
+.form-check-input,
+.form-check-label {
+    flex-grow: 1;
+}
+
+.profile-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #908f8f;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #333;
+}
+
+.profile-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.profile-image input {
+    display: none;
+}
+
+.profile-image label {
+    background-color: #b6b3b3;
+    cursor: pointer;
+    color: #141414;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.form-text {
+    color: #ccc;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #e3b041;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+}
+
+.btn-primary:hover {
+    background-color: #cf9e35;
+}
+
+.btn-primary:focus {
+    box-shadow: 0 0 0 0.25rem rgba(246, 169, 3, 0.5);
+}
+
+.divider {
+    border-top: 1px solid #555;
+    margin: 20px 0;
+}
+
+.form-select {
+    max-height: 120px; /* Show only 4 items */
+    overflow-y: auto;
+}
+
+.modal-body {
+    text-align: center;
+}
+
+.modal-body i {
+    font-size: 3rem;
+    color: green;
+}
+
+.modal-dialog-centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}

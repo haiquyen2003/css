@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaming Electronic Store</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css"> <!-- Include your CSS file here -->
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <a class="navbar-brand" href="#">ElectroStore</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="homepage.html">Home</a>
+        </li>
+        <li class="nav-item dropdown mega-dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button">
+            Products
+          </a>
+          <div class="dropdown-menu mega-dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <div class="dropdown-column">
+              <h6 class="dropdown-header">Categoty</h6>
+              <a class="dropdown-item category-item" href="#" data-brands="brand-laptop">Laptop</a>
+              <a class="dropdown-item category-item" href="#" data-brands="brand-desktop">Máy tính để bàn</a>
+              <a class="dropdown-item category-item" href="#" data-brands="brand-monitor">Màn hình</a>
+              <a class="dropdown-item category-item" href="#" data-brands="brand-motherboard">Bo mạch chủ</a>
+              <a class="dropdown-item category-item" href="#" data-brands="brand-gpu">Card đồ họa</a>
+            </div>
+            <div class="brands-column">
+              <h6 class="dropdown-header">Brands</h6>
+              <div id="brand-laptop" class="brand-items">
+                <a class="dropdown-item" href="#">Laptop Brand 1</a>
+                <a class="dropdown-item" href="#">Laptop Brand 2</a>
+                <a class="dropdown-item" href="#">Laptop Brand 3</a>
+              </div>
+              <div id="brand-desktop" class="brand-items">
+                <a class="dropdown-item" href="#">Desktop Brand 1</a>
+                <a class="dropdown-item" href="#">Desktop Brand 2</a>
+                <a class="dropdown-item" href="#">Desktop Brand 3</a>
+              </div>
+              <div id="brand-monitor" class="brand-items">
+                <a class="dropdown-item" href="#">Monitor Brand 1</a>
+                <a class="dropdown-item" href="#">Monitor Brand 2</a>
+                <a class="dropdown-item" href="#">Monitor Brand 3</a>
+              </div>
+              <div id="brand-motherboard" class="brand-items">
+                <a class="dropdown-item" href="#">Motherboard Brand 1</a>
+                <a class="dropdown-item" href="#">Motherboard Brand 2</a>
+                <a class="dropdown-item" href="#">Motherboard Brand 3</a>
+              </div>
+              <div id="brand-gpu" class="brand-items">
+                <a class="dropdown-item" href="#">GPU Brand 1</a>
+                <a class="dropdown-item" href="#">GPU Brand 2</a>
+                <a class="dropdown-item" href="#">GPU Brand 3</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Software</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Evaluate</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Policy</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Support</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav navbar-icons ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button">
+            <i class="fas fa-user"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+            <a class="dropdown-item" href="login.html">Login</a>
+            <a class="dropdown-item" href="register.html">Register</a>
+            <a class="dropdown-item" href="account.html">Account</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fas fa-heart"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="cart.html"><i class="fas fa-shopping-cart"></i> (02)</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      $('.nav-item.dropdown').hover(function() {
+        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(200);
+      }, function() {
+        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(200);
+      });
+
+      $('.category-item').hover(function() {
+        var brandsToShow = $(this).data('brands');
+        $('.brands-column .brand-items').hide();
+        $('#' + brandsToShow).show();
+        $('.brands-column').show();
+      });
+
+      $('.mega-dropdown-menu').hover(function() {
+        // Keep the brands column visible when hovering over the mega-dropdown
+      }, function() {
+        $('.brands-column').hide();
+      });
+
+      // Ensure dropdown menus are closed on page load
+      $('.dropdown-menu').hide();
+    });
+  </script>
+</body>
+</html>

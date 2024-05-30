@@ -1,0 +1,146 @@
+body {
+  background-color: #1a1a1a; /* Dark background */
+  color: #e0e0e0; /* Light text color */
+  font-family: 'Orbitron', sans-serif; /* Gaming-inspired font */
+}
+
+.navbar {
+  background-color: #0d0d0d; /* Dark navbar */
+}
+
+.navbar-brand {
+  color: #ff6600; /* Neon color for brand */
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+  color: #e0e0e0;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ff6600; /* Neon color on hover */
+}
+
+.cart-steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.cart-step {
+  color: #fff;
+  font-size: 18px;
+  margin: 0 10px;
+}
+
+.cart-step.active {
+  color: #ff6600;
+}
+
+.cart-step i {
+  margin-right: 5px;
+}
+
+.cart-section {
+  padding: 20px;
+  background-color: #262626; /* Dark section background */
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.cart-section h2 {
+  color: #ff6600; /* Neon color for headings */
+}
+
+.table-dark {
+  background-color: #333;
+}
+
+.table-dark th, .table-dark td {
+  vertical-align: middle;
+}
+
+.cart-img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+}
+
+.qty-btn {
+  background-color: #ff6600;
+  border: none;
+  color: #fff;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.qty-input {
+  width: 50px;
+  text-align: center;
+  border: 1px solid #ff6600;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.btn-danger {
+  background-color: #ff6600;
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #ff8533;
+}
+
+.cart-summary {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.cart-summary h5 {
+  color: #ff6600;
+}
+
+.total-price {
+  color: #ff6600;
+  font-size: 24px;
+  text-align: right;
+}
+
+.btn-warning {
+  background-color: #ff6600;
+  border: none;
+}
+
+.btn-warning:hover {
+  background-color: #ff8533;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+footer {
+  background-color: #0d0d0d; /* Dark footer background */
+  color: #e0e0e0;
+  padding: 20px 0;
+}
+
+footer a {
+  color: #ff6600; /* Neon links */
+}
+
+footer a:hover {
+  color: #ff8533; /* Lighter neon links on hover */
+}
+.progress-indicator{
+    display: flex;
+    text-align: center;
+    justify-content:space-evenly ;
+}

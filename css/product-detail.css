@@ -1,0 +1,73 @@
+body {
+    background-color: #1a1a1a; /* Dark background */
+    color: #e0e0e0; /* Light text color */
+    font-family: 'Orbitron', sans-serif; /* Gaming-inspired font */
+    padding-top: 70px; /* Adjust based on the height of the navbar */
+  }
+  
+  .product-detail-img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .product-detail h2 {
+    color: #ff6600; /* Neon color for product title */
+  }
+  
+  .product-detail .text-muted {
+    color: #e0e0e0; /* Light text color */
+  }
+  
+  .product-detail .quantity-controls {
+    display: flex;
+    align-items: center;
+  }
+  
+  .product-detail .quantity-controls button {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .product-detail .quantity-controls input {
+    text-align: center;
+    width: 50px;
+    margin: 0 5px;
+  }
+  
+  .add-to-cart-btn {
+    background-color: #ff6600;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .add-to-cart-btn i {
+    margin-right: 10px;
+  }
+  
+  .product-tabs .nav-tabs .nav-link {
+    color: #e0e0e0;
+  }
+  
+  .product-tabs .nav-tabs .nav-link.active {
+    color: #ff6600; /* Neon color for active tab */
+    background-color: #262626;
+  }
+  
+  .product-tabs .tab-content {
+    background-color: #262626;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .product-description, .product-information {
+    color: #e0e0e0;
+  }
+  

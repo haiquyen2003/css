@@ -1,0 +1,72 @@
+body {
+    background-color: #1a1a1a; /* Dark background */
+    color: #e0e0e0; /* Light text color */
+    font-family: 'Orbitron', sans-serif; /* Gaming-inspired font */
+}
+.navbar {
+    background-color: #0d0d0d; /* Dark navbar */
+}
+.navbar-brand {
+    color: #ff6600; /* Neon color for brand */
+    font-weight: bold;
+}
+.navbar-nav .nav-link {
+    color: #e0e0e0;
+}
+.navbar-nav .nav-link:hover {
+    color: #ff6600; /* Neon color on hover */
+}
+.container {
+    padding-top: 70px; /* Adjust based on the height of the navbar */
+}
+.order-progress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.order-progress div {
+    margin: 0 10px;
+    text-align: center;
+}
+.order-progress .icon {
+    font-size: 24px;
+}
+.order-progress .active {
+    color: #ff6600;
+}
+.order-form, .order-summary {
+    background-color: #262626;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.order-form {
+    margin-right: 20px; /* Add space between form and summary */
+}
+.order-form input, .order-form select, .order-form textarea {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    border: 1px solid #ff6600;
+}
+.order-summary {
+    color: #e0e0e0;
+}
+.btn-primary {
+    background-color: #ff6600;
+    border: none;
+}
+.btn-primary:hover {
+    background-color: #ff8533;
+}
+footer {
+    background-color: #0d0d0d;
+    color: #e0e0e0;
+    padding: 20px 0;
+}
+footer a {
+    color: #ff6600;
+}
+footer a:hover {
+    color: #ff8533;
+}
