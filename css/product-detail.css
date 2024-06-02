@@ -1,73 +1,115 @@
 body {
-    background-color: #1a1a1a; /* Dark background */
-    color: #e0e0e0; /* Light text color */
-    font-family: 'Orbitron', sans-serif; /* Gaming-inspired font */
-    padding-top: 70px; /* Adjust based on the height of the navbar */
-  }
-  
-  .product-detail-img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .product-detail h2 {
-    color: #ff6600; /* Neon color for product title */
-  }
-  
-  .product-detail .text-muted {
-    color: #e0e0e0; /* Light text color */
-  }
-  
-  .product-detail .quantity-controls {
-    display: flex;
-    align-items: center;
-  }
-  
-  .product-detail .quantity-controls button {
-    background-color: #ff6600;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-  }
-  
-  .product-detail .quantity-controls input {
-    text-align: center;
-    width: 50px;
-    margin: 0 5px;
-  }
-  
-  .add-to-cart-btn {
-    background-color: #ff6600;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  .add-to-cart-btn i {
-    margin-right: 10px;
-  }
-  
-  .product-tabs .nav-tabs .nav-link {
-    color: #e0e0e0;
-  }
-  
-  .product-tabs .nav-tabs .nav-link.active {
-    color: #ff6600; /* Neon color for active tab */
-    background-color: #262626;
-  }
-  
-  .product-tabs .tab-content {
-    background-color: #262626;
-    padding: 20px;
-    border-radius: 5px;
-  }
-  
-  .product-description, .product-information {
-    color: #e0e0e0;
-  }
-  
+  background-color: #1a1a1a; /* Dark background */
+  color: #e0e0e0; /* Light text color */
+  font-family: 'Orbitron', sans-serif; /* Gaming-inspired font */
+  padding-top: 70px; /* Adjust based on the height of the navbar */
+}
+
+.product-detail-img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s; /* Smooth zoom effect */
+}
+
+.product-detail-img:hover {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.product-detail h2 {
+  color: #ff6600; /* Neon color for product title */
+}
+
+.product-detail .text-muted {
+  color: #e0e0e0; /* Light text color */
+}
+
+.product-detail .quantity-controls {
+  display: flex;
+  align-items: center;
+}
+
+.product-detail .quantity-controls button {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.product-detail .quantity-controls button:hover {
+  background-color: #e65c00; /* Darker shade on hover */
+}
+
+.product-detail .quantity-controls input {
+  text-align: center;
+  width: 50px;
+  margin: 0 5px;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+}
+
+.add-to-wishlist-btn, .add-to-cart-btn {
+  background-color: #ff6600;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 20px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.add-to-wishlist-btn:hover, .add-to-cart-btn:hover {
+  background-color: #e65c00; /* Darker shade on hover */
+}
+
+.add-to-wishlist-btn i, .add-to-cart-btn i {
+  margin-right: 10px;
+}
+
+.product-tabs .nav-tabs .nav-link {
+  color: #e0e0e0;
+}
+
+.product-tabs .nav-tabs .nav-link.active {
+  color: #ff6600; /* Neon color for active tab */
+  background-color: #262626;
+}
+
+.product-tabs .tab-content {
+  background-color: #262626;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.product-description, .product-information, .product-feedback {
+  color: #e0e0e0;
+}
+
+.product-price {
+  font-size: 24px; /* Tăng kích thước chữ */
+  font-weight: bold;
+  margin-bottom: 15px; /* Thêm khoảng cách dưới */
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #ccc;
+  margin-right: 10px;
+}
+
+.new-price {
+  color: #ff6600; /* Màu nổi bật */
+}
+
+.feedback-item {
+  background-color: #333;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}

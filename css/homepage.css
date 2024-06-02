@@ -1,77 +1,94 @@
 .carousel-inner img {
-    width: 100%;
-    height: 500px; /* Adjust the height as needed */
-    object-fit: cover; /* Ensures the image covers the whole area */
-  }
-  .card {
-    background-color: #262626; /* Dark card background */
-    border: none;
-  }
-  .card-img-top {
-    object-fit: cover;
-    height: 250px; /* Adjust the height as needed */
-    width: 100%;
-    transition: transform 0.3s ease; /* Smooth zoom transition */
-  }
-  .card-img-top:hover {
-    transform: scale(1.1); /* Zoom effect */
-  }
-  .card-body {
-    color: #e0e0e0; /* Light text color in card */
-  }
-  .btn-primary {
-    background-color: #ff6600; /* Neon button */
-    border: none;
-  }
-  .btn-primary:hover {
-    background-color: #ff8533; /* Lighter neon button on hover */
-  }
-  .pagination .page-link {
-    background-color: #262626; /* Dark pagination background */
-    border: none;
-    color: #f00505; /* Light text color */
-  }
-  .pagination .page-link:hover {
-    background-color: #333333; /* Darker pagination background on hover */
-    color: #ff6600; /* Neon color on hover */
-  }
-  .pagination .page-item.disabled .page-link {
-    color: #666666; /* Disabled color */
-  }
-  /* Custom styles for Categories section */
-  .category-item {
-    text-align: center;
-    margin: 20px 0;
-  }
-  .category-item img {
-    width: 150px; /* Adjust the size as needed */
-    height: 150px; /* Adjust the size as needed */
-    object-fit: contain;
-    background-color: #fff; /* Background for better visibility */
-    padding: 10px;
-    border-radius: 8px; /* Rounded corners */
-  }
-  .category-item p {
-    margin-top: 10px;
-    color: #e0e0e0; /* Light text color */
-  }
-  /* Custom styles for Promotion section */
-  .promotion-section {
-    background-color: #1A1A1A; /* Light background */
-    padding: 20px 0;
-  }
-  .promotion-item {
-    text-align: center;
-    margin: 0 auto;
-  }
-  .promotion-item i {
-    font-size: 2em;
-    color: #fafafa; /* Neon icon color */
-  }
-  .promotion-item h5 {
-    margin-top: 10px;
-    color: #e0e0e0; /* Dark text color */
-  }
-  .promotion-item p {
-    color: #666666; /* Gray text color */
-  }
+  width: 100%;
+  height: 500px; /* Adjust the height as needed */
+  object-fit: cover; /* Ensures the image covers the whole area */
+  transition: opacity 0.5s ease-in-out;
+}
+.carousel-item {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.carousel-item.active {
+  opacity: 1;
+}
+.category-item:hover img {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.card {
+  background-color: #262626; /* Dark card background */
+  border: none;
+}
+.card-img-top {
+  object-fit: cover;
+  height: 250px; /* Adjust the height as needed */
+  width: 100%;
+  transition: transform 0.3s ease; /* Smooth zoom transition */
+}
+.card-img-top:hover {
+  transform: scale(1.1); /* Zoom effect */
+}
+.card-body {
+  color: #e0e0e0; /* Light text color in card */
+}
+.btn-primary {
+  background-color: #ff6600; /* Neon button */
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #ff8533; /* Lighter neon button on hover */
+}
+.pagination .page-link {
+  background-color: #262626; /* Dark pagination background */
+  border: none;
+  color: #f00505; /* Light text color */
+}
+.pagination .page-link:hover {
+  background-color: #333333; /* Darker pagination background on hover */
+  color: #ff6600; /* Neon color on hover */
+}
+.pagination .page-item.disabled .page-link {
+  color: #666666; /* Disabled color */
+}
+/* Custom styles for Categories section */
+.category-item {
+  text-align: center;
+  margin: 20px 0;
+}
+.category-item img {
+  width: 150px; /* Adjust the size as needed */
+  height: 150px; /* Adjust the size as needed */
+  object-fit: contain;
+  background-color: #fff; /* Background for better visibility */
+  padding: 10px;
+  border-radius: 8px; /* Rounded corners */
+}
+.category-item p {
+  margin-top: 10px;
+  color: #e0e0e0; /* Light text color */
+}
+/* Custom styles for Promotion section */
+.promotion-section {
+  background-color: #1A1A1A; /* Light background */
+  padding: 20px 0;
+}
+.promotion-item {
+  text-align: center;
+  margin: 0 auto;
+}
+.promotion-item i {
+  font-size: 2em;
+  color: #fafafa; /* Neon icon color */
+}
+.promotion-item h5 {
+  margin-top: 10px;
+  color: #e0e0e0; /* Dark text color */
+}
+.promotion-item p {
+  color: #666666; /* Gray text color */
+}

@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/feedbacked.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 </head>
 
 <body>
@@ -23,9 +23,9 @@
                 <div class="card feedback-card">
                     <div class="card-body">
                         <div class="d-flex">
-                            <img src="mnt/data/image.png" alt="Product Image">
+                            <img src="mnt/data/image.png" alt="Product Image" class="product-img">
                             <div class="ms-3">
-                                <h5 class="card-title">Laptop</h5> <!-- Add your product name here -->
+                                <h5 class="card-title">Laptop</h5>
                                 <p class="card-text"><small class="text-muted">2023-05-01</small></p>
                                 <div class="star-rating">
                                     <i class="fas fa-star"></i>
@@ -38,8 +38,7 @@
                         </div>
                         <p class="card-text mt-3">Excellent product, very satisfied!</p>
                         <div class="feedback-buttons">
-                            <button class="btn btn-update btn-rounded" data-bs-toggle="modal"
-                                data-bs-target="#updateModal"><i class="fas fa-edit"></i> Update</button>
+                            <button class="btn btn-update btn-rounded" data-bs-toggle="modal" data-bs-target="#updateFeedbackModal"><i class="fas fa-edit"></i> Update</button>
                             <button class="btn btn-delete btn-rounded"><i class="fas fa-trash"></i> Delete</button>
                         </div>
                     </div>
@@ -47,9 +46,9 @@
                 <div class="card feedback-card">
                     <div class="card-body">
                         <div class="d-flex">
-                            <img src="mnt/data/image.png" alt="Product Image">
+                            <img src="mnt/data/image.png" alt="Product Image" class="product-img">
                             <div class="ms-3">
-                                <h5 class="card-title">Phone</h5> <!-- Add your product name here -->
+                                <h5 class="card-title">Phone</h5>
                                 <p class="card-text"><small class="text-muted">2023-04-15</small></p>
                                 <div class="star-rating">
                                     <i class="fas fa-star"></i>
@@ -62,8 +61,7 @@
                         </div>
                         <p class="card-text mt-3">Good phone, but could improve battery life.</p>
                         <div class="feedback-buttons">
-                            <button class="btn btn-update btn-rounded" data-bs-toggle="modal"
-                                data-bs-target="#updateModal"><i class="fas fa-edit"></i> Update</button>
+                            <button class="btn btn-update btn-rounded" data-bs-toggle="modal" data-bs-target="#updateFeedbackModal"><i class="fas fa-edit"></i> Update</button>
                             <button class="btn btn-delete btn-rounded"><i class="fas fa-trash"></i> Delete</button>
                         </div>
                     </div>
@@ -71,9 +69,9 @@
                 <div class="card feedback-card">
                     <div class="card-body">
                         <div class="d-flex">
-                            <img src="mnt/data/image.png" alt="Product Image">
+                            <img src="mnt/data/image.png" alt="Product Image" class="product-img">
                             <div class="ms-3">
-                                <h5 class="card-title">Tablet</h5> <!-- Add your product name here -->
+                                <h5 class="card-title">Tablet</h5>
                                 <p class="card-text"><small class="text-muted">2023-03-20</small></p>
                                 <div class="star-rating">
                                     <i class="fas fa-star"></i>
@@ -86,8 +84,7 @@
                         </div>
                         <p class="card-text mt-3">Decent tablet for the price.</p>
                         <div class="feedback-buttons">
-                            <button class="btn btn-update btn-rounded" data-bs-toggle="modal"
-                                data-bs-target="#updateModal"><i class="fas fa-edit"></i> Update</button>
+                            <button class="btn btn-update btn-rounded" data-bs-toggle="modal" data-bs-target="#updateFeedbackModal"><i class="fas fa-edit"></i> Update</button>
                             <button class="btn btn-delete btn-rounded"><i class="fas fa-trash"></i> Delete</button>
                         </div>
                     </div>
@@ -97,19 +94,18 @@
         </div>
     </div>
     <!-- Update Modal -->
-    <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
+    <div class="modal fade" id="updateFeedbackModal" tabindex="-1" aria-labelledby="updateFeedbackModalLabel" aria-hidden="true">
         <div class="modal-dialog">
-            <div class="modal-content">
+            <div class="modal-content custom-modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="updateModalLabel">Update Feedback</h5>
+                    <h5 class="modal-title" id="updateFeedbackModalLabel">Update Feedback</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="updateForm">
+                    <form id="updateFeedbackForm">
                         <div class="mb-3">
                             <label for="feedbackComments" class="form-label">Comments</label>
-                            <textarea class="form-control" id="feedbackComments"
-                                rows="3">Excellent product, very satisfied!</textarea>
+                            <textarea class="form-control custom-textarea" id="feedbackComments" rows="3">Excellent product, very satisfied!</textarea>
                         </div>
                         <div class="mb-3">
                             <label for="starRating" class="form-label">Rating</label>
@@ -121,7 +117,7 @@
                                 <i class="fa fa-star-o" data-rating="5"></i>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary">Save changes</button>
+                        <button type="submit" class="btn save-changes-btn">Save changes</button>
                     </form>
                 </div>
             </div>
@@ -133,6 +129,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script>
         $(function () {
             $("#header").load("header.html");
@@ -152,7 +149,7 @@
             });
         });
 
-        $('#updateModal').on('show.bs.modal', function (event) {
+        $('#updateFeedbackModal').on('show.bs.modal', function (event) {
             var button = $(event.relatedTarget);
             var card = button.closest('.feedback-card');
             var comments = card.find('.card-text').text();
@@ -167,11 +164,20 @@
                     $(this).removeClass('fa-star').addClass('fa-star-o');
                 }
             });
-            $('#updateForm').on('submit', function (event) {
+            $('#updateFeedbackForm').on('submit', function (event) {
                 event.preventDefault();
                 // Add your form submission logic here
-                alert('Feedback submitted with rating: ' + $('#starRating .fa.fa-star').length);
+                toastr.success('Feedback updated successfully!');
+                $('#updateFeedbackModal').modal('hide');
             });
+        });
+
+        $('.btn-delete').on('click', function () {
+            if (confirm('Are you sure you want to delete this feedback?')) {
+                var card = $(this).closest('.feedback-card');
+                card.remove();
+                toastr.success('Feedback deleted successfully!');
+            }
         });
     </script>
 </body>
